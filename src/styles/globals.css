@@ -1,0 +1,37 @@
+@import './reset.css';
+@import './variables.css';
+@import './typography.css';
+
+:root {
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+}
+
+.glass-panel {
+    background: var(--color-bg-glass);
+    backdrop-filter: var(--glass-blur);
+    border: var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    border-radius: 1rem;
+}
+
+.section-wrapper {
+    padding: var(--spacing-lg) var(--spacing-sm);
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+button {
+    cursor: none;
+    /* Hide default cursor */
+}
+
+body,
+a,
+input,
+select,
+textarea {
+    cursor: none;
+    /* Hide default cursor everywhere */
+}

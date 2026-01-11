@@ -1,0 +1,80 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 50px;
+    /* Pill shape */
+    font-weight: 600;
+    font-family: var(--font-heading);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+
+/* Variants */
+.primary {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.3);
+}
+
+.primary:hover {
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.4);
+}
+
+
+.secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-text-main);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.secondary:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.8);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.ghost {
+    background: rgba(255, 255, 255, 0.5);
+    /* Added slight background */
+    color: var(--color-primary);
+    border: 1px solid rgba(15, 23, 42, 0.1);
+    /* Added subtle border */
+}
+
+.ghost:hover {
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.accent {
+    background: linear-gradient(135deg, var(--color-accent) 0%, #14b8a6 100%);
+    color: white;
+    box-shadow: 0 4px 14px rgba(13, 148, 136, 0.3);
+}
+
+/* Sizes */
+.sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+}
+
+.md {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+}
+
+.lg {
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+}
+
+.icon {
+    margin-left: 4px;
+}

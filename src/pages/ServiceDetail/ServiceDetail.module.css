@@ -1,0 +1,117 @@
+.section {
+    padding-top: 120px;
+    padding-bottom: 80px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.backButton {
+    margin-bottom: 2rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: 1.2fr 1fr;
+    }
+}
+
+.imageWrapper {
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    position: relative;
+    max-height: 400px;
+    /* Limit height to prevent huge images */
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.contentWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.description {
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+    line-height: 1.8;
+}
+
+.featuresSection {
+    margin-top: 1rem;
+}
+
+.featureList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.featureItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.05rem;
+    color: var(--color-text-main);
+}
+
+.bookingCard {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.priceTag {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    /* Changed from primary (dark) to accent (bright) */
+    margin: 0.5rem 0;
+}
+
+.warranty {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 500;
+    color: var(--color-text-main);
+}
+
+.bookingCard button {
+    background-color: var(--color-accent);
+    /* Make it pop */
+    color: white;
+    border-radius: 9999px;
+    /* Pill shape radius */
+    font-weight: 600;
+    transition: transform 0.2s;
+}
+
+.bookingCard button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(234, 179, 8, 0.3);
+    /* Accent shadow */
+}
