@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import Button from '../../components/ui/Button';
 import GlassCard from '../../components/ui/GlassCard';
 import styles from './ServiceDetail.module.css';
-import { CheckCircle, ArrowLeft, Shield } from 'lucide-react';
+import { CheckCircle, ArrowLeft, Shield, Phone } from 'lucide-react';
 
 const serviceData = {
     electrical: {
@@ -33,6 +33,27 @@ const serviceData = {
         features: ['Washing machine repair', 'Refrigerator service', 'Microwave repair', 'Geyser service'],
         price: 'Visits from ₹299',
         image: '/assets/images/appliance.png'
+    },
+    submersible: {
+        title: 'Submersible Boring',
+        description: 'Expert submersible pump installation and boring services for reliable water supply.',
+        features: ['Boring drilling', 'Pump installation', 'Motor repair', 'Pipeline setup'],
+        price: 'Starts at ₹2000',
+        image: '/assets/images/submersible.png'
+    },
+    panel: {
+        title: 'Panel Installations',
+        description: 'Industrial and domestic electrical panel installation and maintenance.',
+        features: ['Control panel wiring', 'Distribution board setup', 'Safety switch installation', 'Load testing'],
+        price: 'Starts at ₹1500',
+        image: '/assets/images/panel.png'
+    },
+    earthing: {
+        title: 'Earthing Work',
+        description: 'Complete earthing solutions to ensure electrical safety for your home and office.',
+        features: ['Chemical earthing', 'Plate earthing', 'Resistance testing', 'Safety certification'],
+        price: 'Starts at ₹1000',
+        image: '/assets/images/earthing.png'
     }
 };
 
@@ -118,9 +139,14 @@ const ServiceDetail = () => {
                                 <p style={{ fontSize: '0.9rem', color: 'var(--color-text-muted)' }}>Professional service</p>
                                 <p className={styles.priceTag}>{service.price}</p>
                             </div>
-                            <Button size="lg" onClick={() => navigate('/booking')} style={{ width: '100%' }}>
-                                Book Now
-                            </Button>
+                            <div style={{ display: 'flex', gap: '0.5rem', marginTop: '1rem' }}>
+                                <Button size="lg" onClick={() => navigate('/booking', { state: { service: id } })} style={{ flex: 1 }}>
+                                    Book Now
+                                </Button>
+                                <Button size="lg" variant="secondary" icon={Phone} onClick={() => window.location.href = 'tel:+919876543210'} style={{ flex: 1 }}>
+                                    Call Now
+                                </Button>
+                            </div>
                         </GlassCard>
                     </motion.div>
                 </div>

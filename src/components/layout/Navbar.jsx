@@ -51,6 +51,9 @@ const Navbar = () => {
                         <Link to="/booking" onClick={() => setIsMobileMenuOpen(false)}>
                             <Button variant="accent" className={styles.mobileBtn}>Book Service</Button>
                         </Link>
+                        <a href="tel:+919876543210" onClick={() => setIsMobileMenuOpen(false)} style={{ textDecoration: 'none' }}>
+                            <Button variant="secondary" className={styles.mobileBtn}>Call Now</Button>
+                        </a>
                     </div>
                 )}
             </div>

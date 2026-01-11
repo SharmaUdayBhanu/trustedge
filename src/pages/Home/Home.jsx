@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, CheckCircle, Star } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Phone } from 'lucide-react';
 import Button from '../../components/ui/Button';
 import GlassCard from '../../components/ui/GlassCard';
 import Hero3D from './Hero3D';
@@ -42,6 +42,7 @@ const Home = () => {
                         transition={{ delay: 0.4, duration: 0.8 }}
                     >
                         <Button variant="accent" size="lg" icon={ArrowRight} onClick={() => navigate('/booking')}>Book Now</Button>
+                        <Button variant="primary" size="lg" icon={Phone} onClick={() => window.location.href = 'tel:+919876543210'}>Call Now</Button>
                         <Button variant="secondary" size="lg" onClick={() => navigate('/services')}>Explore Services</Button>
                     </motion.div>
 
@@ -78,7 +79,10 @@ const Home = () => {
                             { id: 'electrical', name: 'Electrical', desc: 'Wiring, panels & repairs', img: '/assets/images/electrical.png' },
                             { id: 'plumbing', name: 'Plumbing', desc: 'Leaks, pipes & fittings', img: '/assets/images/plumbing.png' },
                             { id: 'hvac', name: 'AC & HVAC', desc: 'Cooling, heating & maintenance', img: '/assets/images/hvac.png' },
-                            { id: 'appliance', name: 'Appliance Repair', desc: 'Washers, fridges & more', img: '/assets/images/appliance.png' }
+                            { id: 'appliance', name: 'Appliance Repair', desc: 'Washers, fridges & more', img: '/assets/images/appliance.png' },
+                            { id: 'submersible', name: 'Submersible Boring', desc: 'Pump & boring services', img: '/assets/images/submersible.png' },
+                            { id: 'panel', name: 'Panel Installations', desc: 'Control panels & wiring', img: '/assets/images/panel.png' },
+                            { id: 'earthing', name: 'Earthing Work', desc: 'Safety & grounding', img: '/assets/images/earthing.png' }
                         ].map((service, index) => (
                             <GlassCard key={index} hoverEffect className={styles.serviceCard}>
                                 <img src={service.img} alt={service.name} className={styles.serviceCardImage} loading="lazy" />
@@ -137,7 +141,7 @@ const Home = () => {
                         <h2>Find Us Near You</h2>
                         <p>Serving the greater metropolitan area with prompt, reliable service.</p>
                     </div>
-                    <LocationMap location="CFRX+R5 Kartarpur, Punjab" />
+                    <LocationMap location="Shop no. 3286 Pawan Boring House , Commettee Bazar, Kartarpur, Punjab 144801" />
                 </div>
             </section>
         </div>

@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import Button from '../../components/ui/Button';
 import GlassCard from '../../components/ui/GlassCard';
@@ -7,12 +8,13 @@ import styles from './Booking.module.css';
 import emailjs from '@emailjs/browser';
 
 const Booking = () => {
+    const location = useLocation();
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         phone: '',
         address: '',
-        service: 'electrical',
+        service: location.state?.service || 'electrical',
         date: '',
         notes: '',
         locationUrl: '' // Added location URL
@@ -55,7 +57,6 @@ const Booking = () => {
                         phone: formData.phone,
                         service: formData.service,
                         date: formData.date,
-                        address: formData.address,
                         address: formData.address,
                         notes: formData.notes,
                         location_url: formData.locationUrl, // Pass location URL
@@ -191,6 +192,9 @@ const Booking = () => {
                                         <option value="plumbing">Plumbing</option>
                                         <option value="hvac">AC & HVAC</option>
                                         <option value="appliance">Appliance Repair</option>
+                                        <option value="submersible">Submersible Boring</option>
+                                        <option value="panel">Panel Installations</option>
+                                        <option value="earthing">Earthing Work</option>
                                     </select>
                                 </div>
                             </div>

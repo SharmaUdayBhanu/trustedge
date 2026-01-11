@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import Button from '../../components/ui/Button';
 import GlassCard from '../../components/ui/GlassCard';
-import { ArrowRight, Zap, Droplet, Wind, Wrench } from 'lucide-react';
+import { ArrowRight, Zap, Droplet, Wind, Wrench, Shield, Activity, Settings } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Services.module.css';
 
@@ -37,6 +37,30 @@ const servicesData = [
         icon: Wrench,
         image: '/assets/images/appliance.png',
         color: '#F97316'
+    },
+    {
+        id: 'submersible',
+        title: 'Submersible Boring',
+        description: 'Professional boring and submersible pump installation services.',
+        icon: Activity,
+        image: '/assets/images/submersible.png',
+        color: '#0EA5E9'
+    },
+    {
+        id: 'panel',
+        title: 'Panel Installations',
+        description: 'Electrical control panel setup and maintenance for all needs.',
+        icon: Settings,
+        image: '/assets/images/panel.png',
+        color: '#8B5CF6'
+    },
+    {
+        id: 'earthing',
+        title: 'Earthing Work',
+        description: 'Advanced earthing solutions for maximum electrical safety.',
+        icon: Shield,
+        image: '/assets/images/earthing.png',
+        color: '#10B981'
     }
 ];
 

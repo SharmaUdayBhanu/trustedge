@@ -59,7 +59,7 @@ const Contact = () => {
                                 <MapPin className={styles.icon} />
                                 <div>
                                     <h3>Office</h3>
-                                    <p>123 Trust Lane, Tech City</p>
+                                    <p>Shop no. 3286 Pawan Boring House , Commettee Bazar, Kartarpur, Punjab 144801</p>
                                 </div>
                             </GlassCard>
                         </div>
@@ -87,7 +87,7 @@ const Contact = () => {
 
                 <div className={styles.mapSection}>
                     <h2 style={{ marginBottom: '1.5rem' }}>Visit Our Office</h2>
-                    <LocationMap location="CFRX+R5 Kartarpur, Punjab" />
+                    <LocationMap location="Shop no. 3286 Pawan Boring House , Commettee Bazar, Kartarpur, Punjab 144801" />
                     <div style={{ marginTop: '1rem', textAlign: 'center' }}>
                         <a
                             href="https://share.google/K4Ub2PKh67jhaRXpE"

@@ -47,7 +47,7 @@ const Footer = () => {
                         <ul className={styles.contactList}>
                             <li><Phone size={18} /> +91 9876 543 210</li>
                             <li><Mail size={18} /> trustedgehomeservices@gmail.com</li>
-                            <li><MapPin size={18} /> 123 Trust Lane, Tech City</li>
+                            <li><MapPin size={18} /> Shop no. 3286 Pawan Boring House , Commettee Bazar, Kartarpur, Punjab 144801</li>
                         </ul>
                     </div>
                 </div>
